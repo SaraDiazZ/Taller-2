@@ -4,25 +4,38 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snddiamond</sound>
+    <sound>sound\sndllave</sound>
+    <sound>sound\sndDoor</sound>
+  </sounds>
   <sprites name="sprites">
-    <sprite>sprites\sprllaveroja</sprite>
+    <sprite>sprites\sprllaveroja1</sprite>
     <sprite>sprites\sprwall</sprite>
     <sprite>sprites\sprpuertanegra</sprite>
-    <sprite>sprites\sprplateada</sprite>
+    <sprite>sprites\sprplateada1</sprite>
     <sprite>sprites\sprdiamante</sprite>
+    <sprite>sprites\sprllaveroja2</sprite>
+    <sprite>sprites\sprllaveroja3</sprite>
+    <sprite>sprites\sprplateada2</sprite>
+    <sprite>sprites\sprpersonaje</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\objwall</object>
-    <object>objects\objllaveroja</object>
+    <object>objects\objllaveroja1</object>
     <object>objects\objpuertanegra</object>
-    <object>objects\objllaveplateada</object>
+    <object>objects\objllaveplateada1</object>
     <object>objects\objdiamante</object>
+    <object>objects\objllaveroja2</object>
+    <object>objects\objllaveroja3</object>
+    <object>objects\objllaveplateada2</object>
+    <object>objects\objpersonaje</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Nivel_1</room>
+    <room>rooms\Inicio</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
