@@ -52,6 +52,12 @@ health=100;
             <kind>1</kind>
             <string>///administración de las vidas y nivel de daño
 
+view_yview[0] -=2;
+if(view_yview[0] &lt; 0){
+   show_debug_message("¡YOU WIN!");
+   game_restart();
+}
+
 if(health &lt;= 0){
    health=100;
    audio_play_sound(snd_exploPlane, 10, false);

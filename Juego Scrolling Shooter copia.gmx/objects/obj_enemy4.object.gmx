@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="1" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>vspeed = -4;
+            <string>show_debug_message("Enemy4 destroyed")
 </string>
           </argument>
         </arguments>
@@ -48,10 +48,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(y &lt; -sprite_height){
-instance_destroy();
+            <string>if(y&gt;(view_yview[0] + view_hview[0])){
+   visible = 1;
+   vspeed = -6
+}
+
+if(visible){
+   if(y &lt; (view_yview[0]-sprite_height/2)){
+      instance_destroy();
    }
-   
+} 
 </string>
           </argument>
         </arguments>

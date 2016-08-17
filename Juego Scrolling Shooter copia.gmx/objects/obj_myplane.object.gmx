@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>can_shoot=1;
+            <string>vspeed = -2
+can_shoot=1;
 </string>
           </argument>
         </arguments>
@@ -91,13 +92,15 @@ if(right){
 }
 
 if(up){
-   if(y&gt;sprite_height/2){
+   if(y&gt;view_yview[0] + sprite_height/2){
    y=y-2
    }
 }
 
+var bottomheight = sprite_get_height(spr_bottom);
+
 if(down){
-   if(y&lt;(room_height-120)){
+   if(y&lt; view_yview[0]+(view_hview[0] - (bottomheight+sprite_height/2))){
    y=y+2
    }
 }
