@@ -92,7 +92,7 @@ if(lives&lt;= 0){
           <argument>
             <kind>1</kind>
             <string>var bottom_width = sprite_get_width(spr_bottom);
-var bottom height = sprite_get_height(spr_bottom);
+var bottom_height = sprite_get_height(spr_bottom);
 var bottom_x = 0;
 var bottom_y = view_yview[0] + view_hview[0] - bottom_height;
 
