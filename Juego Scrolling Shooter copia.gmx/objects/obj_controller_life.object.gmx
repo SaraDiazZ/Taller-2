@@ -91,15 +91,25 @@ if(lives&lt;= 0){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(spr_bottom,-1,0,404);//spr_bottom height =76 --&gt; 404 = 408-76
+            <string>var bottom_width = sprite_get_width(spr_bottom);
+var bottom height = sprite_get_height(spr_bottom);
+var bottom_x = 0;
+var bottom_y = view_yview[0] + view_hview[0] - bottom_height;
+
+draw_sprite (spr_bottom, -1, bottom_x, bottom_y);
 draw_set_colour(c_yellow);
-draw_text(108, 404, score);
+draw_text(bottom_x + bottom_width*0.28, bottom_y + bottom_height*0.45, score);
 
-draw_healthbar(12,449,138,459,health,c_black,c_red,c_green,0,true,false);
+healthbar_x1 = bottom_x + bottom_width*0.01875;
+healthbar_y1 = bottom_y + bottom_height*0.5920;
+healthbar_x2 = healthbar_x1 + 126;
+healthbar_y2 = bottom_y + bottom_height*0.7237;
 
-for(i = 0; i&lt;lives; i+=1){
-   draw_sprite(spr_life, -1, 16+32*i, 410);
-};
+draw_healthbar(healthbar_x1, healthbar_y1, healthbar_x2, healthbar_y2, health, c_black, c_red, c_green, 0, false, true);
+
+for (i=0; i&lt;lives; i+=1){
+   draw_sprite(spr_life, -1, sprite_get_width(spr_life)/2 + sprite_get_width(spr_life)*i, bottom_y + bottom_height*0.1);
+   };
 </string>
           </argument>
         </arguments>
