@@ -17,10 +17,17 @@
     <sprite>sprites\spr_red</sprite>
     <sprite>sprites\spr_Bullet</sprite>
     <sprite>sprites\spr_explo</sprite>
-    <sprite>sprites\spr_bottom</sprite>
     <sprite>sprites\spr_life</sprite>
+    <sprite>sprites\spr_enemy3</sprite>
+    <sprite>sprites\spr_bottom</sprite>
+    <sprite>sprites\spr_win</sprite>
+    <sprite>sprites\spr_restart</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\back_win</background>
+    <background>background\back_sky</background>
+    <background>background\back_gameover</background>
+  </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_Ball</object>
@@ -30,10 +37,16 @@
     <object>objects\obj_EmeyPadre</object>
     <object>objects\obj_Bullet</object>
     <object>objects\obj_explo</object>
+    <object>objects\obj_exploenemy</object>
     <object>objects\obj_controller_life</object>
+    <object>objects\obj_enemy3</object>
+    <object>objects\obj_win</object>
+    <object>objects\obj_restart</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Nivel_1</room>
+    <room>rooms\YOU_WIN</room>
+    <room>rooms\YOU_LOSE</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

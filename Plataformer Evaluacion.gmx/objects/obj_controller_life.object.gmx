@@ -60,10 +60,14 @@ if(view_yview[0] &lt; 0){
 
 if(health &lt;= 0){
    health=100;
-}  
+  
+   with(obj_Ball){
+      instance_change(obj_explo, false);
+      }
+}
 
 if(lives&lt;= 0){
-   game_restart();
+   room_goto(YOU_LOSE);
 }
 </string>
           </argument>

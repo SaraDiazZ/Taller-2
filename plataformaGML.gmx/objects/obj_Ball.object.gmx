@@ -61,6 +61,26 @@ key_right= keyboard_check(vk_right);
 key_left = keyboard_check (vk_left);
 key_space = keyboard_check_pressed (vk_space);
 
+if(left){
+   if(x&gt;sprite_width/2){
+   x = x-4;
+   }
+}
+
+if(right){
+   if(x&lt;(room_width-sprite_width/2)){
+   x=x+4;
+   }
+}
+
+if(up){
+   if(y&gt;view_yview[0] + sprite_height/2){
+   y=y-2
+   }
+}
+
+var bottomheight = sprite_get_height(spr_bottom);
+
 //Operaciones con las entradas de teclado 
 move = key_right - key_left;
 hsp = move * movespeed ;

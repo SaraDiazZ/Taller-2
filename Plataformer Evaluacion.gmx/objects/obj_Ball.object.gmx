@@ -82,6 +82,8 @@ key_right= keyboard_check(vk_right);
 key_left = keyboard_check (vk_left);
 key_space = keyboard_check_pressed (vk_up);
 
+var bottomheight = sprite_get_height(spr_bottom);
+
 //Operaciones con las entradas de teclado
 move = key_right - key_left;
 hsp = move * movespeed ;
@@ -145,11 +147,34 @@ fire=keyboard_check(vk_space);
 
 if(fire){
    if(can_shoot){
-      instance_create(x-16, y, obj_Bullet);
+      instance_create(x+16, y, obj_Bullet);
       can_shoot=0;
       alarm[0] = 15;
    }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_win">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_goto(YOU_WIN)
 </string>
           </argument>
         </arguments>
