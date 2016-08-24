@@ -22,6 +22,7 @@
     <sprite>sprites\spr_bottom</sprite>
     <sprite>sprites\spr_win</sprite>
     <sprite>sprites\spr_restart</sprite>
+    <sprite>sprites\spr_enemybullet1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_win</background>
@@ -34,14 +35,15 @@
     <object>objects\obj_wall</object>
     <object>objects\obj_enemy1</object>
     <object>objects\obj_enemy2</object>
-    <object>objects\obj_EmeyPadre</object>
     <object>objects\obj_Bullet</object>
     <object>objects\obj_explo</object>
     <object>objects\obj_exploenemy</object>
-    <object>objects\obj_controller_life</object>
+    <object>objects\obj_controllerlife1</object>
     <object>objects\obj_enemy3</object>
     <object>objects\obj_win</object>
     <object>objects\obj_restart</object>
+    <object>objects\obj_enemybullet1</object>
+    <object>objects\obj_controllerlife2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Nivel_1</room>

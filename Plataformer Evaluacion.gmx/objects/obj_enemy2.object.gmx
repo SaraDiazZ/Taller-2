@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_EmeyPadre</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -50,6 +50,14 @@
             <kind>1</kind>
             <string>if (!place_empty(x,y)){hspeed=-hspeed}
 
+var die = floor(random(30))+1;
+   if (die==1){
+      instance_create(x+16,y,obj_enemybullet1);
+   }
+
+if(x&gt; (view_xview[0] + view_hview[0])){
+   instance_destroy();
+}
 </string>
           </argument>
         </arguments>

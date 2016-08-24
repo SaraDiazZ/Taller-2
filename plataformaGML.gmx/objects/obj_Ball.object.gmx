@@ -55,61 +55,87 @@ jumpspeed  = 7;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// movimiento del personaje
-
+            <string>///movimientos, colisiones
+// Obtener las entradas de teclado
 key_right= keyboard_check(vk_right);
 key_left = keyboard_check (vk_left);
 key_space = keyboard_check_pressed (vk_space);
 
-if(left){
-   if(x&gt;sprite_width/2){
-   x = x-4;
-   }
-}
 
-if(right){
-   if(x&lt;(room_width-sprite_width/2)){
-   x=x+4;
-   }
-}
 
-if(up){
-   if(y&gt;view_yview[0] + sprite_height/2){
-   y=y-2
-   }
-}
-
-var bottomheight = sprite_get_height(spr_bottom);
-
-//Operaciones con las entradas de teclado 
+//Operaciones con las entradas de teclado
 move = key_right - key_left;
 hsp = move * movespeed ;
 
-//Colisión horizontal
-if(place_meeting(x+hsp, y, obj_Block)){
+//Colision horizontal
+if (place_meeting(x+hsp, y, obj_Block)){
    while(!place_meeting(x+sign(hsp), y, obj_Block)){
       x += sign(hsp);
    }
    hsp = 0
 }
-
-x += hsp;
-
-if (vsp &lt; 10) {vsp += grav;}
-
-if (place_meeting(x, y+1, obj_Block)){
-   vsp = key_space * -jumpspeed;
-}
-
-//Colisión vertical
-if(place_meeting(x, y+vsp, obj_Block)){
+//Colisión vertical 
+if (place_meeting(x, y+vsp, obj_Block)){
    while(!place_meeting(x, y+sign(vsp), obj_Block)){
       y += sign(vsp);
    }
    vsp = 0
 }
 
+x += hsp;
+
+if(vsp &lt; 10){vsp +=grav;}
+   if (place_meeting(x, y+1, obj_Block)){
+   vsp = key_space * -jumpspeed;
+}
 y += vsp;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_monsterr">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_restart();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_monsterl">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_restart();
 </string>
           </argument>
         </arguments>
