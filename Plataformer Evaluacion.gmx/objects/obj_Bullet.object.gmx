@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>hspeed=-8;
+</string>
           </argument>
         </arguments>
       </action>
@@ -70,7 +71,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(x&lt;(view_yview[0]-sprite_height/2)){
+            <string>if(x&lt;-sprite_height/2){
    instance_destroy();
 }
 </string>

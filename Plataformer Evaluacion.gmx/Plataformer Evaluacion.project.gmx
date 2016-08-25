@@ -43,6 +43,7 @@
     <object>objects\obj_win</object>
     <object>objects\obj_restart</object>
     <object>objects\obj_enemybullet1</object>
+    <object>objects\obj_enemybullet2</object>
     <object>objects\obj_controllerlife2</object>
   </objects>
   <rooms name="rooms">

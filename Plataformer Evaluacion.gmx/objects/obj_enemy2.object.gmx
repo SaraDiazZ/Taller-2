@@ -50,13 +50,9 @@
             <kind>1</kind>
             <string>if (!place_empty(x,y)){hspeed=-hspeed}
 
-var die = floor(random(30))+1;
+ var die = floor(random(30))+1;
    if (die==1){
-      instance_create(x+16,y,obj_enemybullet1);
-   }
-
-if(x&gt; (view_xview[0] + view_hview[0])){
-   instance_destroy();
+   instance_create(x+16,y,obj_enemybullet2);
 }
 </string>
           </argument>
