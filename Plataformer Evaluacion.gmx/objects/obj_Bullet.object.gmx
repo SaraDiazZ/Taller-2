@@ -25,7 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspeed=-8;
+            <string>
+if (obj_Ball.dir ==1){
+hspeed =24
+image_xscale = 1;
+}
+
+if (obj_Ball.dir == -1){
+hspeed = -24
+image_xscale = -1;
+}
 </string>
           </argument>
         </arguments>
@@ -71,17 +80,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-if (obj_Ball.dir ==1){
-hspeed =24
-image_xscale = 1;
-}
-
-if (obj_Ball.dir == -1){
-hspeed = -24
-image_xscale = -1;
-}
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
