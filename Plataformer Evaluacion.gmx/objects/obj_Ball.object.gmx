@@ -31,7 +31,7 @@ vsp = 0;
 movespeed = 4;
 jumpspeed  = 7;
 can_shoot = 1;
-
+dir = 0;
 </string>
           </argument>
         </arguments>
@@ -78,9 +78,12 @@ can_shoot = 1;
           <argument>
             <kind>1</kind>
             <string>///movimientos, colisiones
+
 // Obtener las entradas de teclado
 key_right= keyboard_check(vk_right);
+if (key_right) dir = 1;
 key_left = keyboard_check (vk_left);
+if (key_left) dir = -1;
 key_space = keyboard_check_pressed (vk_up);
 
 var bottomheight = sprite_get_height(spr_bottom);
@@ -104,6 +107,7 @@ if (place_meeting(x, y+vsp, obj_wall)){
    vsp = 0
 }
 
+//gravedad
 x += hsp;
 
 if(vsp &lt; 10){vsp +=grav;}
@@ -112,6 +116,7 @@ if(vsp &lt; 10){vsp +=grav;}
 }
 y += vsp;
 
+//animate
 if (move!=0) image_xscale = move;
 if (place_meeting(x,y+1,obj_wall))
 {

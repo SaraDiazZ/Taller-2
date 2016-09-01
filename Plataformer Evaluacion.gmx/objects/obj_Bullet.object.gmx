@@ -71,8 +71,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(x&lt;-sprite_height/2){
-   instance_destroy();
+            <string>
+if (obj_Ball.dir ==1){
+hspeed =24
+image_xscale = 1;
+}
+
+if (obj_Ball.dir == -1){
+hspeed = -24
+image_xscale = -1;
 }
 </string>
           </argument>
